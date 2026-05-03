@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yves-Marie Adou — Développeur Junior</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Hero background geometry -->
+  <div class="hero-bg-art" aria-hidden="true">
+    <div class="geo-circle"></div>
+    <div class="geo-circle"></div>
+    <div class="geo-circle"></div>
+    <div class="geo-dot"></div>
+    <div class="geo-dot"></div>
+    <div class="geo-dot"></div>
+    <div class="geo-line"></div>
+    <div class="geo-line"></div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">Y<em>.</em>M Adou</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home"     class="nav-link active">Accueil</a></li>
+      <li><a href="#about"    class="nav-link">À propos</a></li>
+      <li><a href="#skills"   class="nav-link">Compétences</a></li>
+      <li><a href="#projects" class="nav-link">Projets</a></li>
+      <li><a href="#contact"  class="nav-link nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+
+    <!-- Left -->
+    <div class="hero-left">
+      <div class="hero-chip">
+        <span class="chip-dot">✦</span>
+        Disponible pour missions
+      </div>
+
+      <h1 class="hero-name">
+        Yves-Marie
+        <em>Adou</em>
+      </h1>
+
+      <div class="hero-divider"></div>
+
+      <div class="hero-role-wrap">
+        <span class="role-tag">Dev</span>
+        <span id="typewriter"></span><span class="cursor-blink">|</span>
+      </div>
+
+      <p class="hero-bio">
+        Passionné par le développement web et les réseaux informatiques, je crée des solutions numériques robustes et élégantes. De la conception à la mise en ligne, je transforme vos idées en produits concrets et performants.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">
+          Voir mes projets
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="mailto:yvesmarieadou05@gmail.com" class="btn-ghost">Me contacter</a>
+        <a href="CV_ADOU YVES.pdf" class="btn-primary">Télecharger mon cv</a>
+      </div>
+
+      <div class="hero-socials">
+        <div class="social-sep"></div>
+        <a href="https://github.com/" target="_blank" class="social-pill" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://linkedin.com/" target="_blank" class="social-pill" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://wa.me/2250141163781" target="_blank" class="social-pill" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Right — Avatar -->
+    <div class="hero-right">
+      <div class="avatar-card">
+        <div class="avatar-frame">
+          <img src="Image/imga1.jpeg" alt="Yves-Marie Adou" style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
+        </div>
+        <div class="avatar-deco-1"></div>
+        <div class="avatar-deco-2"></div>
+        <div class="badge-available">
+          <span class="badge-dot-green"></span>
+          Disponible
+        </div>
+        <div class="badge-exp">
+          <span class="badge-exp-num">2+</span>
+          <span>Années d'expérience</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-layout">
+        <div data-reveal="left">
+          <span class="sec-label">01 — À propos</span>
+          <h2 class="sec-title">Qui suis-je <em>vraiment ?</em></h2>
+          <p class="sec-sub">
+            Développeur junior basé à Abidjan, Côte d'Ivoire 🇨🇮. Je combine développement web full-stack et administration réseau pour proposer des solutions digitales complètes et fiables.
+          </p>
+          <div class="about-stats-row" style="margin-top:2rem;">
+            <div class="stat-box">
+              <span class="stat-num" data-target="6">0</span><span class="stat-plus">+</span>
+              <p class="stat-label">Technologies</p>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num" data-target="1">0</span><span class="stat-plus">+</span>
+              <p class="stat-label">Projets livrés</p>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num" data-target="2">0</span><span class="stat-plus">+</span>
+              <p class="stat-label">Années d'étude</p>
+            </div>
+          </div>
+        </div>
+        <div data-reveal="right">
+          <div class="about-cards">
+            <div class="about-card">
+              <div class="card-icon">💻</div>
+              <div>
+                <p class="card-title">Développeur Web Full-Stack</p>
+                <p class="card-desc">Je conçois des applications web de bout en bout — interfaces soignées côté client, APIs robustes côté serveur, bases de données optimisées.</p>
+              </div>
+            </div>
+            <div class="about-card">
+              <div class="card-icon">🌐</div>
+              <div>
+                <p class="card-title">Administrateur Réseau</p>
+                <p class="card-desc">Configuration, supervision et sécurisation d'infrastructures réseau. Je garantis la disponibilité et la performance des systèmes informatiques.</p>
+              </div>
+            </div>
+            <div class="about-card">
+              <div class="card-icon">🚀</div>
+              <div>
+                <p class="card-title">Orienté Solutions</p>
+                <p class="card-desc">Chaque projet est une opportunité de créer quelque chose d'utile. Je transforme les besoins métier en produits numériques concrets et durables.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="skills-layout">
+        <div data-reveal="left">
+          <span class="sec-label">02 — Compétences</span>
+          <h2 class="sec-title">Mon <em>Arsenal</em><br/>Technique</h2>
+          <p class="sec-sub" style="margin-bottom:2.5rem;">
+            Un ensemble de technologies soigneusement maîtrisées pour couvrir l'ensemble du cycle de développement.
+          </p>
+
+          <div class="skill-blocks">
+            <div class="skill-block">
+              <p class="skill-block-title">Front-End</p>
+              <div class="skill-row">
+                <div class="skill-meta"><span>HTML5</span><span class="skill-pct">90%</span></div>
+                <div class="skill-track"><div class="skill-bar" data-width="90"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-meta"><span>CSS3</span><span class="skill-pct">85%</span></div>
+                <div class="skill-track"><div class="skill-bar" data-width="85"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-meta"><span>JavaScript</span><span class="skill-pct">75%</span></div>
+                <div class="skill-track"><div class="skill-bar" data-width="75"></div></div>
+              </div>
+            </div>
+            <div class="skill-block">
+              <p class="skill-block-title">Back-End & Base de données</p>
+              <div class="skill-row">
+                <div class="skill-meta"><span>PHP</span><span class="skill-pct">80%</span></div>
+                <div class="skill-track"><div class="skill-bar" data-width="80"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-meta"><span>Laravel</span><span class="skill-pct">65%</span></div>
+                <div class="skill-track"><div class="skill-bar" data-width="65"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-meta"><span>MySQL</span><span class="skill-pct">78%</span></div>
+                <div class="skill-track"><div class="skill-bar" data-width="78"></div></div>
+              </div>
+            </div>
+            <div class="skill-block">
+              <p class="skill-block-title">Réseau & Infrastructure</p>
+              <div class="skill-row">
+                <div class="skill-meta"><span>Administration Réseau</span><span class="skill-pct">72%</span></div>
+                <div class="skill-track"><div class="skill-bar" data-width="72"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-meta"><span>Sécurité Réseau</span><span class="skill-pct">65%</span></div>
+                <div class="skill-track"><div class="skill-bar" data-width="65"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-cloud" data-reveal="right">
+          <h3 class="tech-cloud-title">Technologies<br/><em>& Outils</em></h3>
+          <div class="tech-logos">
+
+            <div class="tech-logo-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+              <span>HTML5</span>
+            </div>
+            <div class="tech-logo-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
+              <span>CSS3</span>
+            </div>
+            <div class="tech-logo-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+              <span>JavaScript</span>
+            </div>
+            <div class="tech-logo-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" />
+              <span>PHP</span>
+            </div>
+            <div class="tech-logo-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel" />
+              <span>Laravel</span>
+            </div>
+            <div class="tech-logo-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
+              <span>MySQL</span>
+            </div>
+            <div class="tech-logo-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+              <span>Git</span>
+            </div>
+            <div class="tech-logo-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+              <span>GitHub</span>
+            </div>
+            <div class="tech-logo-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" />
+              <span>VS Code</span>
+            </div>
+            <div class="tech-logo-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" />
+              <span>Linux</span>
+            </div>
+            <div class="tech-logo-card">
+              <!-- XAMPP n'a pas d'icône devicon, on utilise une icône réseau générique -->
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                <rect width="48" height="48" rx="10" fill="#FB7A24"/>
+                <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="13" font-weight="700" font-family="monospace">XAMPP</text>
+              </svg>
+              <span>XAMPP</span>
+            </div>
+            <div class="tech-logo-card">
+              <!-- Icône réseau -->
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                <rect width="48" height="48" rx="10" fill="#1a8ab5"/>
+                <circle cx="24" cy="14" r="5" fill="white"/>
+                <circle cx="10" cy="36" r="5" fill="white"/>
+                <circle cx="38" cy="36" r="5" fill="white"/>
+                <line x1="24" y1="19" x2="10" y2="31" stroke="white" stroke-width="2"/>
+                <line x1="24" y1="19" x2="38" y2="31" stroke="white" stroke-width="2"/>
+                <line x1="10" y1="36" x2="38" y2="36" stroke="white" stroke-width="2"/>
+              </svg>
+              <span>Admin Réseau</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div data-reveal>
+        <span class="sec-label">03 — Projets</span>
+        <h2 class="sec-title">Ce que j'ai <em>construit</em></h2>
+        <p class="sec-sub">Des solutions concrètes développées avec soin et passion.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Projet 1 : DjassaService -->
+        <div class="project-card" data-reveal>
+          <div class="project-thumb">
+            <!-- Remplace par <img src="djassa.jpg" alt="DjassaService"> si tu as une capture -->
+            <div class="project-thumb-placeholder">🛎️</div>
+            <a href="#" class="project-arrow" title="Voir le projet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+          </div>
+          <div class="project-body">
+            <span class="project-category">Application Web</span>
+            <h3 class="project-name">DjassaService</h3>
+            <p class="project-desc">Plateforme de mise en relation pour services à domicile en Côte d'Ivoire — coiffure, plomberie, ménage, garde d'enfant. Full-stack avec auth sécurisée et tableau de bord.</p>
+            <div class="project-stack">
+              <span class="stack-tag">PHP</span>
+              <span class="stack-tag">MySQL</span>
+              <span class="stack-tag">PDO</span>
+              <span class="stack-tag">JS</span>
+            </div>
+            <div class="project-view-row">
+              <a href="#" class="project-view-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+              <a href="#" class="project-view-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Voir en ligne
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 2 : Portfolio -->
+        <div class="project-card" data-reveal>
+          <div class="project-thumb">
+            <div class="project-thumb-placeholder">🌐</div>
+            <a href="#" class="project-arrow" title="Voir le projet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+          </div>
+          <div class="project-body">
+            <span class="project-category">Website</span>
+            <h3 class="project-name">Portfolio Personnel</h3>
+            <p class="project-desc">Site portfolio responsive et animé présentant mes compétences, projets et coordonnées. Conçu avec HTML, CSS et JavaScript vanilla.</p>
+            <div class="project-stack">
+              <span class="stack-tag">HTML5</span>
+              <span class="stack-tag">CSS3</span>
+              <span class="stack-tag">JavaScript</span>
+            </div>
+            <div class="project-view-row">
+              <a href="#" class="project-view-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+              <a href="#" class="project-view-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Voir en ligne
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 3 : Réseau -->
+        <div class="project-card" data-reveal>
+          <div class="project-thumb">
+            <div class="project-thumb-placeholder">🔧</div>
+            <a href="#" class="project-arrow" title="Voir le projet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+          </div>
+          <div class="project-body">
+            <span class="project-category">Réseau & Infra</span>
+            <h3 class="project-name">Admin Réseau LAN</h3>
+            <p class="project-desc">Configuration et sécurisation d'un réseau local d'entreprise — routage, VLAN, pare-feu et supervision du trafic réseau.</p>
+            <div class="project-stack">
+              <span class="stack-tag">Cisco</span>
+              <span class="stack-tag">VLAN</span>
+              <span class="stack-tag">Firewall</span>
+            </div>
+            <div class="project-view-row">
+              <a href="#" class="project-view-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+              <a href="#" class="project-view-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Voir en ligne
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div data-reveal>
+        <span class="sec-label">04 — Contact</span>
+        <h2 class="sec-title">Travaillons <em>ensemble</em></h2>
+        <p class="sec-sub">Un projet en tête ? Je suis ouvert aux opportunités de collaboration et aux missions freelance.</p>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-left" data-reveal="left">
+          <div class="contact-card">
+            <div class="contact-card-icon">📧</div>
+            <div>
+              <span class="contact-card-label">Email</span>
+              <a href="mailto:yvesmarieadou05@gmail.com" class="contact-card-val">yvesmarieadou05@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon">📍</div>
+            <div>
+              <span class="contact-card-label">Localisation</span>
+              <span class="contact-card-val">Abidjan, Côte d'Ivoire 🇨🇮</span>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon">✅</div>
+            <div>
+              <span class="contact-card-label">Statut</span>
+              <span class="contact-card-val green">Disponible pour des missions</span>
+            </div>
+          </div>
+          <div class="contact-social-row">
+            <a href="https://github.com/" target="_blank" class="csoc-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="https://linkedin.com/" target="_blank" class="csoc-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://wa.me/225" target="_blank" class="csoc-btn wa">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form" data-reveal="right">
+          <h3 class="form-title">Envoyez-moi un message</h3>
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-grp">
+                <label for="fname">Prénom</label>
+                <input type="text" id="fname" placeholder="Votre prénom" required />
+              </div>
+              <div class="form-grp">
+                <label for="lname">Nom</label>
+                <input type="text" id="lname" placeholder="Votre nom" required />
+              </div>
+            </div>
+            <div class="form-grp">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="votre@email.com" required />
+            </div>
+            <div class="form-grp">
+              <label for="subject">Sujet</label>
+              <input type="text" id="subject" placeholder="Objet de votre message" />
+            </div>
+            <div class="form-grp">
+              <label for="message">Message</label>
+              <textarea id="message" rows="5" placeholder="Décrivez votre projet ou demande..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">
+              Envoyer le message
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 <strong>Yves-Marie Adou</strong> — Développeur Junior · Abidjan, Côte d'Ivoire 🇨🇮</p>
+      <p class="footer-sub">Conçu & développé avec passion ✦</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
