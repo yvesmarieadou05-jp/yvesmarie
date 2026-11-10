@@ -1084,6 +1084,20 @@ a.contact-card-val:hover { color: var(--sky-deep); }
 }
 .btn-submit:hover { background: var(--sky-deep); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(26,138,181,0.35); }
 
+/* Message de résultat sous le bouton */
+.form-status {
+  margin-top: 14px;
+  font-size: .92rem;
+  min-height: 1.2em;     /* évite que la page saute quand le texte apparaît */
+}
+.form-status.success { color: #34c759; }
+.form-status.error   { color: #ff5c5c; }
+
+/* Bouton grisé pendant l'envoi */
+.btn-submit:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
 /* ===========================
    FOOTER
    =========================== */

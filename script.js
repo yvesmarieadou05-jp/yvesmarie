@@ -45,7 +45,7 @@ function updateActive() {
 }
 
 /* ===== TYPEWRITER ===== */
-const roles = ['Développeur Web 💻', 'Développeur PHP 🐘', 'Admin Réseau 🌐', 'Problem Solver ✨'];
+const roles = ['Développeur Web 💻', 'Développeur Mobile 📱', 'Laravel · React · Flutter ⚡', 'Admin Réseau 🌐'];
 let ri = 0, ci = 0, del = false;
 const tw = document.getElementById('typewriter');
 
@@ -84,21 +84,53 @@ document.querySelectorAll('[data-reveal]').forEach((el, i) => {
   revealObs.observe(el);
 });
 
-/* ===== CONTACT FORM ===== */
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const btn = this.querySelector('.btn-submit');
-  const orig = btn.innerHTML;
-  btn.innerHTML = '✅ Message envoyé avec succès !';
-  btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
-  btn.disabled = true;
-  setTimeout(() => {
-    btn.innerHTML = orig;
-    btn.style.background = '';
-    btn.disabled = false;
-    this.reset();
-  }, 3500);
-});
+// ===== Formulaire de contact : envoi via Formspree =====
+const form = document.getElementById('contactForm');
+const statusEl = document.getElementById('formStatus');
+
+if (form) {
+  form.addEventListener('submit', async (e) => {
+    // Empêche le rechargement/la redirection par défaut du navigateur
+    e.preventDefault();
+
+    const button = form.querySelector('.btn-submit');
+    const originalHTML = button.innerHTML;   // on garde le contenu pour le remettre après
+
+    // État "envoi en cours" : on bloque le bouton pour éviter les doubles clics
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    statusEl.textContent = '';
+    statusEl.className = 'form-status';
+
+    try {
+      // FormData lit automatiquement tous les champs qui ont un attribut name
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        // Demande à Formspree de répondre en JSON (au lieu d'une page HTML)
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        statusEl.textContent = '✅ Message envoyé ! Je vous répondrai très vite.';
+        statusEl.classList.add('success');
+        form.reset();                         // vide le formulaire
+      } else {
+        // Le serveur a répondu avec une erreur (formulaire mal configuré, limite atteinte...)
+        throw new Error('Réponse du serveur : ' + response.status);
+      }
+    } catch (error) {
+      // Erreur réseau ou erreur du serveur
+      console.error(error);
+      statusEl.textContent = '❌ Échec de l\'envoi. Réessayez ou contactez-moi sur WhatsApp.';
+      statusEl.classList.add('error');
+    } finally {
+      // Dans tous les cas, on remet le bouton dans son état normal
+      button.disabled = false;
+      button.innerHTML = originalHTML;
+    }
+  });
+}
 
 /* ===== SMOOTH SCROLL ===== */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
