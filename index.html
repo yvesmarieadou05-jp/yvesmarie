@@ -74,7 +74,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
         <a href="mailto:yvesmarieadou05@gmail.com" class="btn-ghost">Me contacter</a>
-        <a href="CV_ADOU YVES.pdf" class="btn-primary">Télecharger mon cv</a>
+        <a href="CV professionnel noir simple.pdf" class="btn-primary">Télecharger mon cv</a>
       </div>
 
       <div class="hero-socials">
@@ -95,7 +95,7 @@
     <div class="hero-right">
       <div class="avatar-card">
         <div class="avatar-frame">
-          <img src="Image/imga1.jpeg" alt="Yves-Marie Adou" style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
+          <img src="/Image/imge1.png" alt="Yves-Marie Adou" style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
         </div>
         <div class="avatar-deco-1"></div>
         <div class="avatar-deco-2"></div>
@@ -123,7 +123,8 @@
           </p>
           <div class="about-stats-row" style="margin-top:2rem;">
             <div class="stat-box">
-              <span class="stat-num" data-target="6">0</span><span class="stat-plus">+</span>
+              <!-- MODIFIÉ : data-target passé de 6 à 8 (6 technologies de base + React + Flutter) -->
+              <span class="stat-num" data-target="8">0</span><span class="stat-plus">+</span>
               <p class="stat-label">Technologies</p>
             </div>
             <div class="stat-box">
@@ -177,6 +178,8 @@
           </p>
 
           <div class="skill-blocks">
+
+            <!-- Bloc Front-End -->
             <div class="skill-block">
               <p class="skill-block-title">Front-End</p>
               <div class="skill-row">
@@ -191,7 +194,16 @@
                 <div class="skill-meta"><span>JavaScript</span><span class="skill-pct">75%</span></div>
                 <div class="skill-track"><div class="skill-bar" data-width="75"></div></div>
               </div>
+              <!-- NOUVEAU : React
+                   data-width = pourcentage de remplissage de la barre (lu par script.js).
+                   Le 60% est un exemple : mets le niveau qui reflète ton vrai niveau. -->
+              <div class="skill-row">
+                <div class="skill-meta"><span>React</span><span class="skill-pct">60%</span></div>
+                <div class="skill-track"><div class="skill-bar" data-width="60"></div></div>
+              </div>
             </div>
+
+            <!-- Bloc Back-End -->
             <div class="skill-block">
               <p class="skill-block-title">Back-End & Base de données</p>
               <div class="skill-row">
@@ -207,6 +219,8 @@
                 <div class="skill-track"><div class="skill-bar" data-width="78"></div></div>
               </div>
             </div>
+
+            <!-- Bloc Réseau -->
             <div class="skill-block">
               <p class="skill-block-title">Réseau & Infrastructure</p>
               <div class="skill-row">
@@ -218,6 +232,18 @@
                 <div class="skill-track"><div class="skill-bar" data-width="65"></div></div>
               </div>
             </div>
+
+            <!-- NOUVEAU : bloc Mobile avec Flutter
+                 Même structure que les autres blocs, donc le CSS et le JS existants s'appliquent tout seuls.
+                 Le 65% est un exemple à adapter. -->
+            <div class="skill-block">
+              <p class="skill-block-title">Mobile</p>
+              <div class="skill-row">
+                <div class="skill-meta"><span>Flutter</span><span class="skill-pct">65%</span></div>
+                <div class="skill-track"><div class="skill-bar" data-width="65"></div></div>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -249,6 +275,19 @@
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
               <span>MySQL</span>
             </div>
+
+            <!-- NOUVEAU : React (icône Devicon, comme les autres) -->
+            <div class="tech-logo-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+              <span>React</span>
+            </div>
+
+            <!-- NOUVEAU : Flutter (icône Devicon, comme les autres) -->
+            <div class="tech-logo-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" />
+              <span>Flutter</span>
+            </div>
+
             <div class="tech-logo-card">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
               <span>Git</span>
@@ -294,111 +333,140 @@
   </section>
 
   <!-- ===== PROJECTS ===== -->
-  <section class="projects section" id="projects">
-    <div class="container">
-      <div data-reveal>
-        <span class="sec-label">03 — Projets</span>
-        <h2 class="sec-title">Ce que j'ai <em>construit</em></h2>
-        <p class="sec-sub">Des solutions concrètes développées avec soin et passion.</p>
-      </div>
-
-      <div class="projects-grid">
-
-        <!-- Projet 1 : DjassaService -->
-        <div class="project-card" data-reveal>
-          <div class="project-thumb">
-            <!-- Remplace par <img src="djassa.jpg" alt="DjassaService"> si tu as une capture -->
-            <div class="project-thumb-placeholder">🛎️</div>
-            <a href="#" class="project-arrow" title="Voir le projet">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-            </a>
-          </div>
-          <div class="project-body">
-            <span class="project-category">Application Web</span>
-            <h3 class="project-name">DjassaService</h3>
-            <p class="project-desc">Plateforme de mise en relation pour services à domicile en Côte d'Ivoire — coiffure, plomberie, ménage, garde d'enfant. Full-stack avec auth sécurisée et tableau de bord.</p>
-            <div class="project-stack">
-              <span class="stack-tag">PHP</span>
-              <span class="stack-tag">MySQL</span>
-              <span class="stack-tag">PDO</span>
-              <span class="stack-tag">JS</span>
-            </div>
-            <div class="project-view-row">
-              <a href="#" class="project-view-btn">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                GitHub
-              </a>
-              <a href="#" class="project-view-btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                Voir en ligne
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Projet 2 : Portfolio -->
-        <div class="project-card" data-reveal>
-          <div class="project-thumb">
-            <div class="project-thumb-placeholder">🌐</div>
-            <a href="#" class="project-arrow" title="Voir le projet">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-            </a>
-          </div>
-          <div class="project-body">
-            <span class="project-category">Website</span>
-            <h3 class="project-name">Portfolio Personnel</h3>
-            <p class="project-desc">Site portfolio responsive et animé présentant mes compétences, projets et coordonnées. Conçu avec HTML, CSS et JavaScript vanilla.</p>
-            <div class="project-stack">
-              <span class="stack-tag">HTML5</span>
-              <span class="stack-tag">CSS3</span>
-              <span class="stack-tag">JavaScript</span>
-            </div>
-            <div class="project-view-row">
-              <a href="#" class="project-view-btn">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                GitHub
-              </a>
-              <a href="#" class="project-view-btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                Voir en ligne
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Projet 3 : Réseau -->
-        <div class="project-card" data-reveal>
-          <div class="project-thumb">
-            <div class="project-thumb-placeholder">🔧</div>
-            <a href="#" class="project-arrow" title="Voir le projet">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-            </a>
-          </div>
-          <div class="project-body">
-            <span class="project-category">Réseau & Infra</span>
-            <h3 class="project-name">Admin Réseau LAN</h3>
-            <p class="project-desc">Configuration et sécurisation d'un réseau local d'entreprise — routage, VLAN, pare-feu et supervision du trafic réseau.</p>
-            <div class="project-stack">
-              <span class="stack-tag">Cisco</span>
-              <span class="stack-tag">VLAN</span>
-              <span class="stack-tag">Firewall</span>
-            </div>
-            <div class="project-view-row">
-              <a href="#" class="project-view-btn">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                GitHub
-              </a>
-              <a href="#" class="project-view-btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                Voir en ligne
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
+<section class="projects section" id="projects">
+  <div class="container">
+    <div data-reveal>
+      <span class="sec-label">03 — Projets</span>
+      <h2 class="sec-title">Ce que j'ai <em>construit</em></h2>
+      <p class="sec-sub">Des solutions concrètes développées avec soin et passion.</p>
     </div>
-  </section>
+
+    <div class="projects-grid">
+
+      <!-- Projet 1 : DjassaService -->
+      <div class="project-card" data-reveal>
+        <div class="project-thumb">
+          <img src="/Image/djassa.png" alt="Capture de la plateforme DjassaService"
+               width="1200" height="750" loading="lazy">
+          <a href="https://TON-LIEN-EN-LIGNE" class="project-arrow" title="Voir le projet"
+             target="_blank" rel="noopener">
+            <!-- alt="" : l'icône est décorative, le lien a déjà un title -->
+            <img src="/Image/djassa.png" alt="" class="icon icon-white">
+          </a>
+        </div>
+        <div class="project-body">
+          <span class="project-category">Application Web</span>
+          <h3 class="project-name">DjassaService</h3>
+          <p class="project-desc">Plateforme de mise en relation pour services à domicile en Côte d'Ivoire — coiffure, plomberie, ménage, garde d'enfant. Full-stack avec auth sécurisée et tableau de bord.</p>
+          <div class="project-stack">
+            <span class="stack-tag">Laravel</span>
+            <span class="stack-tag">PHP</span>
+            <span class="stack-tag">MySQL</span>
+            <span class="stack-tag">JS</span>
+          </div>
+          <div class="project-view-row">
+            <a href="https://github.com/TON-COMPTE/TON-DEPOT" class="project-view-btn"
+               target="_blank" rel="noopener">
+              <img src="images/icons/github.png" alt="" class="icon icon-white"> GitHub
+            </a>
+            <a href="https://TON-LIEN-EN-LIGNE" class="project-view-btn"
+               target="_blank" rel="noopener">
+              <img src="images/icons/globe.png" alt="" class="icon icon-white"> Voir en ligne
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 2 : Portfolio -->
+      <div class="project-card" data-reveal>
+        <div class="project-thumb">
+          <img src="/Image/image2.png" alt="Capture de mon portfolio personnel"
+               width="1200" height="750" loading="lazy">
+          <a href="https://TON-LIEN-EN-LIGNE" class="project-arrow" title="Voir le projet"
+             target="_blank" rel="noopener">
+            <img src="/Image/image2.png" alt="" class="icon icon-white">
+          </a>
+        </div>
+        <div class="project-body">
+          <span class="project-category">Website</span>
+          <h3 class="project-name">Portfolio Personnel</h3>
+          <p class="project-desc">Site portfolio responsive et animé présentant mes compétences, projets et coordonnées. Conçu avec HTML, CSS et JavaScript vanilla.</p>
+          <div class="project-stack">
+            <span class="stack-tag">HTML5</span>
+            <span class="stack-tag">CSS3</span>
+            <span class="stack-tag">JavaScript</span>
+          </div>
+          <div class="project-view-row">
+            <a href="https://github.com/TON-COMPTE/TON-DEPOT" class="project-view-btn"
+               target="_blank" rel="noopener">
+              <img src="images/icons/github.png" alt="" class="icon icon-white"> GitHub
+            </a>
+            <a href="https://TON-LIEN-EN-LIGNE" class="project-view-btn"
+               target="_blank" rel="noopener">
+              <img src="images/icons/globe.png" alt="" class="icon icon-white"> Voir en ligne
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 3 : SafeCI (Flutter) -->
+      <div class="project-card" data-reveal>
+        <div class="project-thumb">
+          <img src="images/safeci.webp" alt="Capture de l'application mobile SafeCI"
+               width="1200" height="750" loading="lazy">
+          <a href="https://github.com/TON-COMPTE/safeci_security_app" class="project-arrow"
+             title="Voir le projet" target="_blank" rel="noopener">
+            <img src="images/icons/arrow.png" alt="" class="icon icon-white">
+          </a>
+        </div>
+        <div class="project-body">
+          <span class="project-category">Application Mobile</span>
+          <h3 class="project-name">SafeCI</h3>
+          <p class="project-desc">Application mobile de sécurité : gestion des agents, des interventions et des plaintes.</p>
+          <div class="project-stack">
+            <span class="stack-tag">Flutter</span>
+            <span class="stack-tag">Dart</span>
+          </div>
+          <div class="project-view-row">
+            <a href="https://github.com/TON-COMPTE/safeci_security_app" class="project-view-btn"
+               target="_blank" rel="noopener">
+              <img src="images/icons/github.png" alt="" class="icon icon-white"> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 4 : Réseau -->
+      <div class="project-card" data-reveal>
+        <div class="project-thumb">
+          <img src="/Image/Rinfo.avif" alt="Schéma du réseau local configuré"
+               width="1200" height="750" loading="lazy">
+          <a href="https://github.com/TON-COMPTE/TON-DEPOT" class="project-arrow"
+             title="Voir le projet" target="_blank" rel="noopener">
+            <img src="/Image/Rinfo.avif" alt="" class="icon icon-white">
+          </a>
+        </div>
+        <div class="project-body">
+          <span class="project-category">Réseau & Infra</span>
+          <h3 class="project-name">Admin Réseau LAN</h3>
+          <p class="project-desc">Configuration et sécurisation d'un réseau local d'entreprise — routage, VLAN, pare-feu et supervision du trafic réseau.</p>
+          <div class="project-stack">
+            <span class="stack-tag">Cisco</span>
+            <span class="stack-tag">VLAN</span>
+            <span class="stack-tag">Firewall</span>
+          </div>
+          <div class="project-view-row">
+            <a href="https://github.com/TON-COMPTE/TON-DEPOT" class="project-view-btn"
+               target="_blank" rel="noopener">
+              <img src="images/icons/github.png" alt="" class="icon icon-white"> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <!-- ===== CONTACT ===== -->
   <section class="contact section" id="contact">
